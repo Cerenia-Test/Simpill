@@ -122,7 +122,6 @@ class TreatmentLogDatabase(context: Context, factory: SQLiteDatabase.CursorFacto
         val cursor = this.readableDatabase.rawQuery("SELECT * FROM $TABLE_NAME", null)
         return Reader().fill(cursor)
     }
-
 }
 
 data class Treatment(val id: Int, val treatment: String, val amount: Double?, val unit: String?, val time: Int)
