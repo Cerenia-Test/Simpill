@@ -7,6 +7,7 @@ import static com.example.simpill.Pill.PRIMARY_KEY_INTENT_KEY_STRING;
 import static com.example.simpill.Simpill.CRASH_DATA_INTENT_KEY_STRING;
 import static com.example.simpill.Simpill.IS_CRASH_INTENT_KEY_STRING;
 
+
 import android.content.Intent;
 import android.graphics.Canvas;
 import android.media.MediaPlayer;
@@ -23,12 +24,23 @@ import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.airbnb.lottie.LottieAnimationView;
+
+//"IXwDmcyAEZEUvkES0IXy144JB SimPillAddOn start"
+import com.example.simpill.ext.AddOnMethodsKt;
+import com.example.simpill.ext.TreatmentLogDatabase;
+import static com.example.simpill.ext.AddOn.initializeGoToLogButton;
+//"IXwDmcyAEZEUvkES0IXy144JB SimPillAddOn end"
+
 import it.xabaras.android.recyclerview.swipedecorator.RecyclerViewSwipeDecorator;
 
 public class MainActivity extends AppCompatActivity implements Pill.PillListener {
 
     private final SharedPrefs sharedPrefs = new SharedPrefs(this);
     private final DatabaseHelper myDatabase = new DatabaseHelper(this);
+    //"IXwDmcyAEZEUvkES0IXy144JB SimPillAddOn start"
+    private final TreatmentLogDatabase treatmentLog = new TreatmentLogDatabase(this, null);
+    Button goToLog;
+    //"IXwDmcyAEZEUvkES0IXy144JB SimPillAddOn end"
     private final ArrayHelper arrayHelper = new ArrayHelper();
     private final Toasts toasts = new Toasts(this);
     public Pill[] pills;
@@ -201,12 +213,18 @@ public class MainActivity extends AppCompatActivity implements Pill.PillListener
         aboutButton = findViewById(R.id.about_button);
         fab = findViewById(R.id.floating_action_button);
         recyclerView = findViewById(R.id.recyclerView);
+        //"IXwDmcyAEZEUvkES0IXy144JB SimPillAddOn start"
+        goToLog = findViewById(R.id.button);
+        //"IXwDmcyAEZEUvkES0IXy144JB SimPillAddOn end"
     }
 
     private void initiateButtons() {
         settingsButton.setOnClickListener(v -> openSettingsActivity());
         aboutButton.setOnClickListener(v -> openAboutActivity());
         fab.setOnClickListener(v -> openCreatePillActivity());
+        //"IXwDmcyAEZEUvkES0IXy144JB SimPillAddOn start"
+        initializeGoToLogButton(goToLog, this);
+        //"IXwDmcyAEZEUvkES0IXy144JB SimPillAddOn end"
     }
 
     private void loadPillsFromDatabase() {

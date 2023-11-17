@@ -1,12 +1,10 @@
-package com.example.simpill
+package com.example.simpill.ext
 
-import android.content.ContentValues
 import android.content.Context
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import androidx.core.content.contentValuesOf
-import androidx.core.database.getIntOrNull
 
 val DATABASE_NAME = "treatment_log"
 
@@ -80,7 +78,7 @@ class TreatmentLogDatabase(context: Context, factory: SQLiteDatabase.CursorFacto
         /**
          * Get current element and advance to the next one.
          */
-        open fun getNext() : Treatment{
+        open fun getNext() : Treatment {
             return list.get(idx++)
         }
     }
