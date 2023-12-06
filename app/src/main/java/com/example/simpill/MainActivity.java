@@ -26,9 +26,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.airbnb.lottie.LottieAnimationView;
 
 //"IXwDmcyAEZEUvkES0IXy144JB SimPillAddOn start"
-import com.example.simpill.ext.AddOnMethodsKt;
-import com.example.simpill.ext.TreatmentLogDatabase;
 import static com.example.simpill.ext.AddOn.initializeGoToLogButton;
+import com.example.simpill.ext.TreatmentLogDatabase;
 //"IXwDmcyAEZEUvkES0IXy144JB SimPillAddOn end"
 
 import it.xabaras.android.recyclerview.swipedecorator.RecyclerViewSwipeDecorator;
