@@ -4,9 +4,9 @@
 ; git-subrepo command. See https://github.com/ingydotnet/git-subrepo#readme
 ;
 [subrepo]
-	remote = https://github.com/Cerenia/Simpill-subrepo.git
+	remote = https://Cerenia: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@github.com/Cerenia/Simpill-subrepo.git
 	branch = master
-	commit = 9e6c8364adac4de7943ff1c1a9a0bb44cd7b9664
+	commit = 52a52f2bd085612b70a66d089b183cd0eb886296
 	method = merge
 	cmdver = 0.4.6
-	parent = 6121dc23639915bb3bb95a735c8a849afe71d18f
+	parent = 4442f54e70d6ac4349cf40e622f3178c0cfcea67
