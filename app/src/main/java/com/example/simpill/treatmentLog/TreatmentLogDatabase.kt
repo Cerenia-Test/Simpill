@@ -6,6 +6,7 @@ import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import androidx.core.content.contentValuesOf
+import com.example.simpill.Pill
 
 val DATABASE_NAME = "treatment_log"
 
@@ -103,7 +104,7 @@ class TreatmentLogDatabase(context: Context, factory: SQLiteDatabase.CursorFacto
         TODO("Not yet implemented")
     }
 
-    fun add(treatment_id: Int, amount: Double?, unit: String?, time: Int) : Boolean{
+    fun add(treatment_id: Int, amount: Double?, unit: String?, time: Long) : Boolean{
         val contentValues = contentValuesOf(Pair(TREATMENT_COL, treatment_id),
                                             Pair(AMOUNT_COL, amount),
                                             Pair(UNIT_COL, unit),
@@ -122,9 +123,10 @@ class TreatmentLogDatabase(context: Context, factory: SQLiteDatabase.CursorFacto
         return Reader().fill(cursor)
     }
 
-    fun populateWithDummies() {
-        val entry: ContentValues = ContentValues()
-
+    fun populateWithDummies(pills: Array<Pill>) {
+        for(p in pills){
+            add(p.primaryKey, 1.5, "hours", java.util.Date().time)
+        }
     }
 }
 

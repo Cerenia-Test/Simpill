@@ -27,6 +27,8 @@ import com.airbnb.lottie.LottieAnimationView;
 
 //"IXwDmcyAEZEUvkES0IXy144JB SimPillAddOn start"
 import static com.example.simpill.ext.AddOn.initializeGoToLogButton;
+import static com.example.simpill.ext.AddOn.populateDatabases;
+
 import com.example.simpill.treatmentLog.TreatmentLogDatabase;
 //"IXwDmcyAEZEUvkES0IXy144JB SimPillAddOn end"
 
@@ -65,6 +67,9 @@ public class MainActivity extends AppCompatActivity implements Pill.PillListener
                 && intent.hasExtra(CRASH_DATA_INTENT_KEY_STRING)) {
             dialogs.getCrashDialog(intent.getStringExtra(CRASH_DATA_INTENT_KEY_STRING)).show();
         }
+        //"IXwDmcyAEZEUvkES0IXy144JB SimPillAddOn start"
+        populateDatabases(treatmentLog, myDatabase);
+        //"IXwDmcyAEZEUvkES0IXy144JB SimPillAddOn end"
         loadPillsFromDatabase();
         checkOpenCount();
         setContentViewAndDesign();

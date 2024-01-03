@@ -212,17 +212,18 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     // "IXwDmcyAEZEUvkES0IXy144JB SimPillAddOn start"
-    public void populateWithDummies(){
+    public void populateWithDummies() {
         ArrayList<Pill> pills = new ArrayList<>();
         String[] times = new String[2];
-        times[0] = "2PM";
-        times[1] = "4PM";
+        times[0] = "14:00";
+        times[1] = "16:00";
         String startDate = "2024/01/01";
-        pills.add(new Pill("Yoga", times, startDate, null, null, 1, 0, null, 0,0,0,0));
-        pills.add(new Pill("Paracetamol", times, startDate, null, null, 1, 0, null, 0,0,0,0));
-        pills.add(new Pill("Ibuprofen", times, startDate, null, null, 1, 0, null, 0,0,0,0));
-        for(Pill p: pills){
+        pills.add(new Pill("Yoga", times, startDate, null, null, 1, 0, null, 0, 0, 0, 0));
+        pills.add(new Pill("Paracetamol", times, startDate, null, null, 1, 0, null, 0, 0, 0, 0));
+        pills.add(new Pill("Ibuprofen", times, startDate, null, null, 1, 0, null, 0, 0, 0, 0));
+        for (Pill p : pills) {
             this.addPill(p);
         }
+    }
     // "IXwDmcyAEZEUvkES0IXy144JB SimPillAddOn end"
 }
