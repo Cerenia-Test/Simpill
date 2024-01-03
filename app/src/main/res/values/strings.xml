@@ -1,5 +1,9 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
+
+    <!--IXwDmcyAEZEUvkES0IXy144JB SimPillAddOn start-->
+    <string name="treatment_log_title" translatable="false">Treatment Log</string>
+    <!--IXwDmcyAEZEUvkES0IXy144JB SimPillAddOn end-->
     <string name="app_name" translatable="false">Simpill</string>
 
     <!--General Strings-->

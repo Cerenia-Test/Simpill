@@ -1,5 +1,6 @@
-package com.example.simpill.ext
+package com.example.simpill.treatmentLog
 
+import android.content.ContentValues
 import android.content.Context
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
@@ -119,6 +120,11 @@ class TreatmentLogDatabase(context: Context, factory: SQLiteDatabase.CursorFacto
     fun getAllEntries() : Reader {
         val cursor = this.readableDatabase.rawQuery("SELECT * FROM $TABLE_NAME", null)
         return Reader().fill(cursor)
+    }
+
+    fun populateWithDummies() {
+        val entry: ContentValues = ContentValues()
+
     }
 }
 

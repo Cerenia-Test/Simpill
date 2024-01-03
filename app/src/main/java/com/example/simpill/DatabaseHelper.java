@@ -10,6 +10,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.net.Uri;
 import android.util.Log;
 
+import java.util.ArrayList;
+
 public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "PillList.db";
     private static final int DATABASE_VERSION = 2;
@@ -208,4 +210,19 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 cursor.getInt(cursor.getColumnIndexOrThrow(COLUMN_BOTTLECOLOR))
         );
     }
+
+    // "IXwDmcyAEZEUvkES0IXy144JB SimPillAddOn start"
+    public void populateWithDummies(){
+        ArrayList<Pill> pills = new ArrayList<>();
+        String[] times = new String[2];
+        times[0] = "2PM";
+        times[1] = "4PM";
+        String startDate = "2024/01/01";
+        pills.add(new Pill("Yoga", times, startDate, null, null, 1, 0, null, 0,0,0,0));
+        pills.add(new Pill("Paracetamol", times, startDate, null, null, 1, 0, null, 0,0,0,0));
+        pills.add(new Pill("Ibuprofen", times, startDate, null, null, 1, 0, null, 0,0,0,0));
+        for(Pill p: pills){
+            this.addPill(p);
+        }
+    // "IXwDmcyAEZEUvkES0IXy144JB SimPillAddOn end"
 }
