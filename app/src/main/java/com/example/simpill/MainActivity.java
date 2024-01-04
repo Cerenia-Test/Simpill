@@ -29,7 +29,7 @@ import com.airbnb.lottie.LottieAnimationView;
 import static com.example.simpill.ext.AddOn.initializeGoToLogButton;
 import static com.example.simpill.ext.AddOn.populateDatabases;
 
-import com.example.simpill.ext.treatmentLog.TreatmentLogDatabase;
+import com.example.simpill.ext.treatmentLog.TreatmentLogDatabaseHelper;
 //"IXwDmcyAEZEUvkES0IXy144JB SimPillAddOn end"
 
 import it.xabaras.android.recyclerview.swipedecorator.RecyclerViewSwipeDecorator;
@@ -39,7 +39,6 @@ public class MainActivity extends AppCompatActivity implements Pill.PillListener
     private final SharedPrefs sharedPrefs = new SharedPrefs(this);
     private final DatabaseHelper myDatabase = new DatabaseHelper(this);
     //"IXwDmcyAEZEUvkES0IXy144JB SimPillAddOn start"
-    private final TreatmentLogDatabase treatmentLog = new TreatmentLogDatabase(this, null);
     Button goToLog;
     //"IXwDmcyAEZEUvkES0IXy144JB SimPillAddOn end"
     private final ArrayHelper arrayHelper = new ArrayHelper();
@@ -68,7 +67,7 @@ public class MainActivity extends AppCompatActivity implements Pill.PillListener
             dialogs.getCrashDialog(intent.getStringExtra(CRASH_DATA_INTENT_KEY_STRING)).show();
         }
         //"IXwDmcyAEZEUvkES0IXy144JB SimPillAddOn start"
-        populateDatabases(treatmentLog, myDatabase);
+        populateDatabases(TreatmentLogDatabaseHelper.Factory.getDatabase(this), myDatabase);
         //"IXwDmcyAEZEUvkES0IXy144JB SimPillAddOn end"
         loadPillsFromDatabase();
         checkOpenCount();
