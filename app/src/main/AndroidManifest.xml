@@ -23,6 +23,11 @@
             android:name=".CreatePill"
             android:parentActivityName=".MainActivity"
             android:theme="@style/SimpillAppTheme" />
+        <!--IXwDmcyAEZEUvkES0IXy144JB SimPillAddOn start-->
+        <activity android:name=".ext.treatmentLog.TreatmentLogActivity"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/SimpillAppTheme" />
+        <!--IXwDmcyAEZEUvkES0IXy144JB SimPillAddOn end-->
         <activity
             android:name=".Settings"
             android:parentActivityName=".MainActivity"

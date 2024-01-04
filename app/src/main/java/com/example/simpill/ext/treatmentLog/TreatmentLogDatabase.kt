@@ -1,4 +1,4 @@
-package com.example.simpill.treatmentLog
+package com.example.simpill.ext.treatmentLog
 
 import android.content.ContentValues
 import android.content.Context
@@ -57,6 +57,7 @@ class TreatmentLogDatabase(context: Context, factory: SQLiteDatabase.CursorFacto
                 }
                 val time = c.getInt(c.getColumnIndexOrThrow(TIME_COL))
                 list.add(Treatment(id, treatment, amount, unit, time))
+                c.moveToNext()
             }
             idx = list.size // set the index after the last element to start
             return this
@@ -124,8 +125,12 @@ class TreatmentLogDatabase(context: Context, factory: SQLiteDatabase.CursorFacto
     }
 
     fun populateWithDummies(pills: Array<Pill>) {
-        for(p in pills){
-            add(p.primaryKey, 1.5, "hours", java.util.Date().time)
+        var reader = getAllEntries()
+        if(!reader.moveToFirst()){
+            // Only fill if DB is empty
+            for(p in pills){
+                add(p.primaryKey, 1.5, "hours", java.util.Date().time)
+            }
         }
     }
 }

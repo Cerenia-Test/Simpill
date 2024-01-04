@@ -37,15 +37,18 @@
             app:layout_constraintTop_toTopOf="parent"
             android:layout_marginEnd="24dp" />
 
+        <!--IXwDmcyAEZEUvkES0IXy144JB SimPillAddOn start-->
+        <!--Source Code edit instead of clean interface-->
         <Button
             android:id="@id/floating_action_button"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginBottom="18dp"
+            android:layout_marginStart="18dp"
             android:background="@drawable/ic_plus_svgrepo_com"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
+        <!--IXwDmcyAEZEUvkES0IXy144JB SimPillAddOn end-->
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
@@ -109,10 +112,10 @@
             android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Log"
-            app:layout_constraintTop_toBottomOf="@id/animationView"
-            app:layout_constraintEnd_toStartOf="@id/add_btn_main"
-            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginBottom="18dp"
+            android:text="@string/treatment_log_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/add_btn_main"
             app:layout_constraintBottom_toBottomOf="parent"
             />
 

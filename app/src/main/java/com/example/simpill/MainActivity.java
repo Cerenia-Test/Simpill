@@ -29,7 +29,7 @@ import com.airbnb.lottie.LottieAnimationView;
 import static com.example.simpill.ext.AddOn.initializeGoToLogButton;
 import static com.example.simpill.ext.AddOn.populateDatabases;
 
-import com.example.simpill.treatmentLog.TreatmentLogDatabase;
+import com.example.simpill.ext.treatmentLog.TreatmentLogDatabase;
 //"IXwDmcyAEZEUvkES0IXy144JB SimPillAddOn end"
 
 import it.xabaras.android.recyclerview.swipedecorator.RecyclerViewSwipeDecorator;

@@ -1,4 +1,4 @@
-package com.example.simpill.treatmentLog;
+package com.example.simpill.ext.treatmentLog;
 
 import android.os.Bundle;
 import android.widget.TextView;

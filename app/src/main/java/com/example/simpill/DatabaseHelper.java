@@ -213,6 +213,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     // "IXwDmcyAEZEUvkES0IXy144JB SimPillAddOn start"
     public void populateWithDummies() {
+        Pill[] currentPills = getAllPills();
+        if(currentPills.length > 0){
+            return;
+        }
         ArrayList<Pill> pills = new ArrayList<>();
         String[] times = new String[2];
         times[0] = "14:00";
