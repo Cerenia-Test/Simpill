@@ -2,11 +2,14 @@
 
     <string name="app_name" translatable="false">Simpill</string>
 
+    <string name="rando" translatable="false">Rando</string>
+    <string name="rando_text" translatable="false">You clicked a random button!!!!! (｡◕‿‿◕｡)</string>
+
     <!--General Strings-->
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="ok" tools:ignore="ButtonCase,Typos">Ok</string>
-    <string name="taken">Taken</string>
+    <string name="taken" translatable="false">Taken</string>
     <string name="dismiss">Dismiss</string>
 
     <!--Content Description Strings-->

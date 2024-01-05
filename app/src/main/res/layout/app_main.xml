@@ -100,8 +100,18 @@
             android:text="@string/add"
             android:textColor="@color/alice_blue"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="@id/rando"
             app:layout_constraintTop_toBottomOf="@+id/animationView" />
+
+        <Button
+            android:id="@+id/rando"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/add_btn_main"
+            />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

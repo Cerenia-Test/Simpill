@@ -16,6 +16,8 @@ import android.view.View;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
@@ -29,6 +31,7 @@ public class MainActivity extends AppCompatActivity implements Pill.PillListener
 
     private final SharedPrefs sharedPrefs = new SharedPrefs(this);
     private final DatabaseHelper myDatabase = new DatabaseHelper(this);
+    private Button tokenButton;
     private final ArrayHelper arrayHelper = new ArrayHelper();
     private final Toasts toasts = new Toasts(this);
     public Pill[] pills;
@@ -54,9 +57,17 @@ public class MainActivity extends AppCompatActivity implements Pill.PillListener
                 && intent.hasExtra(CRASH_DATA_INTENT_KEY_STRING)) {
             dialogs.getCrashDialog(intent.getStringExtra(CRASH_DATA_INTENT_KEY_STRING)).show();
         }
+        setContentViewAndDesign();
+        tokenButton = findViewById(R.id.rando);
+        tokenButton.setText(R.string.rando);
+        tokenButton.setOnClickListener(v -> {
+            Toast t = new Toast(this);
+            t.setDuration(Toast.LENGTH_LONG);
+            t.setText(R.string.rando_text);
+            t.show();
+        });
         loadPillsFromDatabase();
         checkOpenCount();
-        setContentViewAndDesign();
         findViewsByIds();
         createRecyclerView();
         makeRecyclerViewItemsSwipeable();
