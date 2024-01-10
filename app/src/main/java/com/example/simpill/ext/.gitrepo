@@ -1,0 +1,12 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/ingydotnet/git-subrepo#readme
+;
+[subrepo]
+	remote = https://Cerenia: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@github.com/Cerenia/Simpill-subrepo.git
+	branch = master
+	commit = d146cdcc8b298d1aaf1ff2aa35c0b90d0e7e454f
+	parent = 71c036408df7a644508d158030eef748dd6fc44c
+	method = merge
+	cmdver = 0.4.6
