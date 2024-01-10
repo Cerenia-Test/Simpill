@@ -6,7 +6,7 @@
 [subrepo]
 	remote = https://Cerenia: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@github.com/Cerenia/Simpill-subrepo.git
 	branch = migration_v1.1.1
-	commit = 7dbb94cee5df8c4d680d66f70e39f646092ec194
-	parent = c009502fa036504d5e6b0b448dd3265a3369ff33
+	commit = 0339080e3ade3dcd0ea4e1c44f7413ecb29c96aa
+	parent = b0c6e2ae46a68d909aa008e49de5de03c823507c
 	method = merge
 	cmdver = 0.4.6
